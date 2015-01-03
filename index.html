@@ -1,0 +1,843 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>DEFENSIVE OMNIVORE BINGO</title>
+    <script type="text/javascript" src="jquery-1.4.4.min.js"> </script>
+    <!-- bubbletip... tooltips -->
+    <script src="bubbletip/js/jQuery.bubbletip-1.1.0.js" type="text/javascript"></script>
+    <link href="bubbletip/js/bubbletip/bubbletip.css" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+    <link href="bubbletip/js/bubbletip/bubbletip-IE.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <style type="text/css">
+      /*<![CDATA[*/
+      body { font-size: 75% }
+      DIV#entries { display: none; }
+      DIV.answer  { width: 30em; }
+      TABLE#board { margin-left: auto; margin-right: auto; text-align: center; background-color: black; border: 4px outset black; }
+      TABLE#board TH { background-color: white; font-size: 175%; font-weight: bold; height: 3em;}
+      TABLE#board TD { background-color: white; border: 2px inset black; text-align: center; width: 11em; }
+      TABLE#board TD.used { background: white url(red_bingo_ch.jpg) no-repeat center; }
+
+      .tipsy { font-size: 90%; }
+      /*]]>*/
+    </style>
+  </head>
+  <body id="jq-interior" class="sidebar-left">
+    <table id="board">
+      <tr><th colspan="5">DEFENSIVE OMNIVORE BINGO</th></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td id="free" class="used"></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td></tr>
+    </table>
+    <div id="entries">
+      <div class="entry">
+	<div class="statement">
+	  "If God didn't want us to eat animals, then why did he make them out of meat?"
+	</div>
+	<div class="answer">
+	  I don't know if you noticed, but you are also made out of meat.
+	  Anyway, you have it backwards, you're not supposed to eat meat because it's made out of animals.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Begins to wax sentimental over some variety of meat they could never give up.
+	</div>
+	<div class="answer">
+	  I've heard some people say the same thing about cigarettes and alcohol.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Asks where you get your protein.
+	</div>
+	<div class="answer">
+	  Where do you get your riboflavin?
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Brings up PETA.
+	</div>
+	<div class="answer">
+	  PETA is to animal rights what the National Socialist Party in Germany was to socialism. (GLF)
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "I didn't climb to the top of the food chain to eat plants."
+	</div>
+	<div class="answer">
+	  Leaving aside the fact that the "top of the food chain" is an antiquated concept, what does that have to do with ethics?
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Explains how they tried vegetarianism once and it didn't work out.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Argues that humans are different from other animals, and therefore eating them is morally justified.
+	</div>
+	<div class="answer">
+	  Different in what way?  Which arbitrary characteristic are you using?  "All forms of discrimination have their particular characteristics, but they share in common the commidification of the sentient other, and in that sense they are all the same." -- Gary Francione (VeganFreak Radio #58)
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Argues that humans are no different from other animals, and therefore eating them... Lions eat zebras, right?
+	</div>
+	<div class="answer">
+	  No different from animals?  When did you last shit on the ground?  When did you last kill someone to gain a mate?
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Asks what would happen to the cows if we didn't eat them.  Feigns concern.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Expresses concern for plant suffering.
+	</div>
+	<div class="answer">
+	  Try sticking a knife into a head of cabbage.  Now stick a knife into your dog.  Which kind of suffering concerns you more?
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Preaches to you about how preachy vegans are.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Wonders how we'd grow enough food to feed us all if everyone went vegan overnight.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Asks why you care more about animals than human beings.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Describes some extremely unlikely hypothetical scenario in which you'd be forced to eat meat to survive.
+	</div>
+	<div class="answer">
+	  "Now if I were starving to death, would I kill an animal? I probably would. Then again, if I were starving to death, I might kill you. But we don't want to build a moral system on how I or anyone else would behave in an emergency." -- Gary Francione.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Points out that some object you own contains some infinitesimal amount of animal product.
+	</div>
+	<div class="answer">
+	  OMG!  You're right!  Your brilliant analysis has shattered the entire basis for my world-view!  I may as well give up and eat a cheeseburger.
+	  <br/>
+	  End of sarcasm.  It is impossible to be 100% pure (especially in a world that is so steeped in discrimination and exploitation of all sorts), there may be a harm to any choice you make.  But to leap from there to "why bother" is crazy.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "Do you eat fish?"
+	</div>
+	<div class="answer">
+	  I really worry about people who can't tell the difference between plants and animals.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Tells you about the vegan somewhere who once did something wrong.  Concludes that all vegans are hypocrites.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Mentions canine teeth.
+	</div>
+	<div class="answer">
+	  I'd like to see you take down a gazelle with those things.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "Vegetarian: Indian word for 'bad hunter.'"
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Describes the happy farm animal they once saw somewhere.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Expresses a completely unrelated concern for starving children somewhere.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Something irrelevant about cavemen.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Wonders why you don't make better use of all that time you waste not eating animals.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Describes a vegan they knew once who suffered from some random ailment.  Concludes it was caused by lack of meat.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "If you get pregnant you'll start eating meat and dairy again, right?"
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Waves their 'food' in front of you, as though you secretly want it.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "We're mammals so we are supposed to drink milk."
+	</div>
+	<div class="answer">
+	  Does your mother still breast-feed you?
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "Vitamin B12 only comes from animals."
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "A little steak once in a while won't hurt you!"
+	</div>
+	<div class="answer">
+	  This is possibly true.  But it <em>kills</em> the cow.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Talks about how he/she doesn't really eat that <em>much</em> meat.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "Plants are what food eats!"
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Laments that they would be vegan except for [<em>insert imaginary barrier, such as a husband, mom, or remote location</em>].
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Talks about being vegan for many years, but is now on the Atkins diet.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Brings up some blood-type bullshit.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "At least hunters, like me, kill our own animals."
+	</div>
+	<div class="answer">
+	  There is, indeed, something ethically confused with people who like to eat meat, but would never butcher an animal.  No argument there.  However, when a mobster hires a hit-man, both have committed an immoral act.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "What would all the cattle ranchers, pig farmers, egg hatcheries, and dairy farmers do? Their families will starve to death if you take away their income."
+	</div>
+	<div class="answer">
+	  I wonder what the icemen, hired horse-and-buggy drivers, and slaveowners did when those businesses became relics of the past?
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "Hitler was a vegetarian."
+	</div>
+	<div class="answer">
+	  Even if this were true (which is <a href="http://www.vegsource.com/berry/hitler.html">doubtful</a>),
+	  it <a href="http://www.abolitionistapproach.com/faqs/">proves nothing</a>,
+	  other than
+	  <a href="http://en.wikipedia.org/wiki/Godwin%27s_law">Godwin's Law</a>.
+	  Stalin was a meat-eater and killed more people than Hitler, so what does that say about meat-eaters?
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Mutters something about "rabbit food."
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Calls you "elitist."
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Threatens to eat two animals for every one you save.  Then calls you an asshole.
+	</div>
+	<div class="answer">
+	  Today I didn't eat an entire cow, you better get busy.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Insists that veganism is a type of eating disorder.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Says animals are treated better than humans.  Refers to rich aunt's Pekingese.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Wonders what you expect Bushmen/Eskimos/etc. to do.
+	</div>
+	<div class="answer">
+While I don't like any sort of killing, those who do it out of necessity are very different from those who have no such necessity but still enjoy the products of tortured and murdered animals just because they like the taste. In other words, there is a world of difference between an Inuit killing and eating a bear and an American picking up a plastic wrapped steak at the grocery store.
+<br/>
+Furthermore, the number of deaths caused by hunter-gatherer societies is insignificant compared to that which we cause, therefore isn't of a lot of concern to me.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Changes the subject to abortion.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Claims to only eat organic, free-range meat.
+	</div>
+	<div class="answer">
+	  You had best find out about the <a href="http://www.humanemyth.org/">humane myth</a>
+	  and the <a href="http://www.peacefulprairie.org/freerange1.html">free-range myth</a>.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Claims to give thanks for the animal's sacrifice before every meal, just like Native Americans.
+	</div>
+	<div class="answer">
+	  I'm sure that makes the animal feel better about their <em>forced</em> sacrifice.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Expresses shock that you would deprive cows of milking, lest their udders explode!
+	</div>
+	<div class="answer">
+	  There is a grain of truth in this: a nursing mother experience some pain of they do not nurse their child for a while.  So this isn't a problem unless <a href="http://www.peacefulprairie.org/outreach/dairyPoster.html">the mother was forcibly impregnated and had her child stolen from her.</a>  If you really think the farmer is going to stop milking certain cows because a few people become vegan, you don't understand supply and demand.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Insists that vegans cause more deaths than omnis.  Repeats the word "collateral" <em>ad nauseam</em>.
+	</div>
+	<div class="answer">
+
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "A vegan?  Is that like a gay vegetarian?"
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Proudly describes his vegan diet, except for the occasional fish, and cheese, and...
+	</div>
+	<div class="answer">
+	  That's like saying you're a Christian because you only worship Satan once in a while.
+	  <br/>
+	  (thanks to Everly on the Abolitionst Approach Forums for this)
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "We protect farm animals from starvation/disease/predation.  They owe us."
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "You city slickers are all the same.  Have you ever visited a farm?"
+	</div>
+	<div class="answer">
+	  Visited?  I grew up on a beef farm.  So there!
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Mysteriously develops a soy allergy.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Describes veganism as a religion or cult.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Uses every part of the animal "just like the natives."
+	  May also be 1/9th Chickasaw.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  PETA -- People Eating Tasty Animals.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Approvingly quotes Carol Adams while scarfing down a BLT.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Brings up rare ailments which may make veganism difficult.  Concludes you want them to die.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  “Eating the flesh of a tortured animal makes you a REAL MAN.”
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Asks what you eat?  Looks astonished.
+	</div>
+	<div class="answer">
+	  What do I eat?  Two possible answers: "food" or "everything else".
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Comments how remarkably healthy you look despite being vegan.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "So <em>that's</em> why you're so skinny!"
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  “We needed meat to grow our brains and evolve past the monkeys.”
+	</div>
+	<div class="answer">
+	  That may or may not be true.  It can also be argued that the United States got where it is thanks to African slaves, but that does not justify continuing such practices.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Claims that eating animals is natural.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Refers to the Bible.
+	</div>
+	<div class="answer">
+'And God said: Behold, I have given you every herb bearing seed, and every tree in which is the fruit of a tree yielding seed, to you it shall be for meat.'—Gen. i., 29.
+
+'But flesh with life thereof, which is the blood thereof, ye shall not eat.'—Gen. ix., 4.
+
+'It shall be a perpetual statute throughout your generations in all your dwellings, that ye shall eat neither fat nor blood.'—Lev. iii., 17.
+
+'Ye shall eat no manner of blood, whether it be of fowl, or beast.'—Lev. vii., 26.
+
+'Ye shall eat the blood of no manner of flesh: for the life of all flesh is the blood thereof: whosoever eateth it shall be cut off.'—Lev. xvii., 14.[Pg 43]
+
+'The wolf also shall dwell with the lamb, and the leopard shall lie down with the kid; and the calf and the young lion and the fatling together; and a little child shall lead them.... They shall not hurt nor destroy in all my holy mountain.'—Isaiah lxv.
+
+'He that killeth an ox is as he that slayeth a man.'—Isaiah lxvi., 3.
+
+'I desire mercy, and not sacrifice.'—Matt. ix., 7.
+
+'It is good not to eat flesh, nor to drink wine, nor to do anything whereby thy brother stumbleth.'—Romans xiv., 21.
+
+'Wherefore, if meat maketh my brother to stumble I will eat no flesh for evermore, that I make not my brother stumble.'—1 Cor. viii., 13.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Says veganism is just a phase you'll outgrow.
+	</div>
+	<div class="answer">
+	  Eating animal products was a phase I outgrew.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Asks if you eat animal crackers.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Accuses you of secretly eating meat when nobody is looking.
+	</div>
+	<div class="answer">
+	  Do you secretly eat human flesh when nobody is looking?
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "You can't just fill up on vegetables and fruits. You need something with nutrients in it too."
+	</div>
+	<div class="answer">
+	  Since you have such in-depth knowledge about nutrition, list the specific nutrients which plants do not have.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Asks if you're a "strict" vegan, or if you eat meat/milk/eggs once in a while.
+	</div>
+	<div class="answer">
+	  Someone who eats meat/milk/eggs but calls themselves vegan is more accurately called a liar.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "Life requires death."
+	</div>
+	<div class="answer">
+	  I can guess where you got that from, read <a href="http://permavegan.blogspot.com/2010/03/facing-death-rebuttal-to-chapter-one-of.html">this</a>.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Insists on pronouncing it VAY-gun.
+	</div>
+	<div class="answer">
+	  As in from <a href="http://en.wikipedia.org/wiki/Vega">Vega</a>?
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Insists on pronouncing it VEJ-un.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Wonders why you think animals are more important than people.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Speculates about how many salads you eat each day.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  The waiter asks if you are alergic.
+	</div>
+	<div class="answer">
+	  What difference does that make?  Unless you're planning to slip in something to see if I notice?
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Asks what you would do if you unwittingly ate an animal product.
+	</div>
+	<div class="answer">
+	  What would you do if you unwittingly ate dog meat?
+	</div>
+      </div> 
+      <div class="entry">
+	<div class="statement">
+	  Points out that you can eat their food, just pick out the meat.
+	</div>
+	<div class="answer">
+	  Would you eat that food if you had to pick globs of shit out of it?
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Assumes your girlfriend/wife put you up to this.  Ignores your answers to the contrary.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "Did you hear that tofu will make your son start menstruating out of his nipples?  I read this in a very reliable study funded by the <a href="http://sourcewatch.org/index.php?title=Weston_A._Price_Foundation">Weston A. Price Foundation</a>."
+	</div>
+	<div class="answer">
+	  (I stole this from <a href="http://veganfeministagitator.blogspot.com/2010/12/another-disgruntled-alphabet.html">here</a>)
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Expresses shock that you are willing to spend so much extra for vegan food.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Expresses shock that you "force" your child to eat this way, depriving them of vital cholesterol.
+	</div>
+	<div class="answer">
+	  Does it also bother you when an orthodox Jew doesn't let their child eat pork or shellfish?
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Talks about insects getting killed when growing vegetables.  Feigns concern.
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Points out that fossil fuels came from animals and are not vegan.
+	</div>
+	<div class="answer">
+	  There are two problems here. First is that fossil fuel (coal, oil, natural gas) <a href="http://en.wikipedia.org/wiki/Fossil_fuel#Origin">came from algae, plankton and plants.</a> Secondly, even if fossil fuel did come from dinosaurs, as the myth goes, they were able to live out their natural lives without being enslaved or killed by humans.
+	  <br/>
+	  Of course, we should not be using fossil fuels in the irresponsible way we are, but that's simply a matter of common sense, not animal rights.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Begins listing all the food you "can't" eat.
+	</div>
+	<div class="answer">
+	  I <em>can</em> eat anything I want, but I <em>won't</em> eat animal products, much in the same way you can eat cat or dog but you won't.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Declares that some people are alcoholics, some are drug addicts, and some are vegetarians.
+	</div>
+	<div class="answer">
+	  And some people are assholes.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Wonders how you tolerate eating flavorless food all the time.
+	</div>
+	<div class="answer">
+	  if a cook cannot make an interesting or flavorful vegan dish, they are incompetent.
+	  Any moron can throw a slab of flesh onto a plate and and have a flavorful meal.  Many do.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "Vegans have no sex drive."
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  "What if a cow came up to you and asked you to drink it's milk?  What if a dying cow gave you permission to eat it?"
+	</div>
+	<div class="answer">
+	  Yay for silly hypotheticals!
+	  What if a woman came up to you asked you to drink her breast milk?  What if a dying person asked you to eat their flesh?
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Points out that the death of a human is a greater tragedy than that of an animal.
+	</div>
+	<div class="answer">
+	  Which human?  Which animal?  A tragedy to whom?  The death of a family member is a greater tragedy than that of a total stranger.
+	</div>
+      </div>
+      <div class="entry">
+	<div class="statement">
+	  Send <a href="mailto:trent@veganmilitia.org">me</a> your suggestions!
+	</div>
+	<div class="answer">
+	</div>
+      </div>
+    </div>
+    <p>
+      I found this on
+      <a href="http://veganporn.com/1052300484/Defensive-Omnivore-Bingo">veganporn</a>,
+      further searching revealed it originated
+      <a href="http://www.postpunkkitchen.com/forum/viewtopic.php?pid=2053258#p2053087">here</a>.  Someone did a <a href="http://www.easyvegan.info/2009/12/15/defensive-omnivore-bingo-2/">second version</a>.
+      I've added some new entries taken from various places around the, uh, internets and my own experience.
+      This board is only showing <span id="shownentries">?</span> out of <span id="totalentries">?</span> possible entries, refresh the page to see different ones (someday I mad add a refresh button).
+    </p>
+    <script type="text/javascript">
+      $(function () {
+	  var entries = $("DIV#entries DIV.entry");
+
+	  // put the totals in the text
+	  $("SPAN#shownentries").text($("TABLE#board TD").length-1);
+	  $("SPAN#totalentries").text(entries.length);
+
+	  // shuffle the list
+	  entries.sort(function(a,b) { return Math.random()*2-1; });
+	  // We only need 24 of them
+	  entries = entries.slice(0,24);
+	  var cells = $("TABLE#board TD").not("#free");
+	  entries.each(function(i,e)
+		 {
+		     // put the statement in the square
+		     cells.eq(i).html($(e).children(".statement").html());
+		     // make the cell square
+		     cells.eq(i).css("height", cells.eq(i).width());
+		     // set up the tooltip
+		     if ($(e).children(".answer").text().match(/\S/))
+			 cells.eq(i).bubbletip($(e).children(".answer"),
+					       {delayShow: 300,
+                                                calculateOnShow: true,
+						deltaDirection: (i <= 10 ? "down" : "up")});
+		     // set up chip placement
+		     cells.eq(i).click(function(event)
+				       {
+					   if (cells.eq(i).hasClass("used"))
+					       cells.eq(i).removeClass("used");
+					   else
+					       cells.eq(i).addClass("used");
+					   if (checkforbingo())
+					   {
+					       alert("BINGO!");
+					   }
+				       });
+		 });
+      });
+      // this is kinda kludgy... 
+      function checkforbingo()
+      {
+	  var table = $("TABLE#board TD");
+	  var width = table.eq(0).siblings().length+1;
+	  var height = table.length/width;
+
+	  // check for diagonal
+	  if (table.eq(0).hasClass("used") && table.eq(6).hasClass("used") && table.eq(12).hasClass("used") && table.eq(18).hasClass("used") && table.eq(24).hasClass("used"))
+	      return true;
+	  if (table.eq(4).hasClass("used") && table.eq(8).hasClass("used") && table.eq(12).hasClass("used") && table.eq(16).hasClass("used") && table.eq(20).hasClass("used"))
+	      return true;
+
+	  // check each row 
+	  for (var r = 0; r < table.length; r++)
+	  {
+	      var bingo = true;
+	      for (var c = 0; c < width; c++)
+	      {
+		  if (!table.eq(r*width+c).hasClass("used"))
+		      bingo = false;
+	      }
+	      if (bingo) return true;
+	  }
+	  // check each column
+	  for (var c = 0; c < width; c++)
+	  {
+	      var bingo = true;
+	      for (var r = c; r < table.length; r+=width)
+	      {
+		  if (!table.eq(r).hasClass("used"))
+		      bingo = false;
+	      }
+	      if (bingo) return true;
+	  }
+	  
+      }
+    </script>
+  </body>
+</html>
